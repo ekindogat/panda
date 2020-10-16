@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography;
+using UnityEngine;
+
+public class cylinderInfJump : MonoBehaviour
+{
+   
+    // Start is called before the first frame update
+    void Start()
+    {
+        int gravity, speed;
+        speed = 5;
+        gravity = -1;
+        transform.position = new Vector3(0, 56, -12);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        CallContext speed;
+        CallContext gravity;
+        CallContext transform.position;
+        if (speed >= -5)
+        {
+            speed = speed + gravity;
+        }
+        else
+        {
+            speed = -8;
+        }
+
+        }
+
+        transform.position = transform.position + new Vector3(0, speed * Time.deltaTime,0);
+    }
+}
